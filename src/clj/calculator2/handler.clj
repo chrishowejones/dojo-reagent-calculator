@@ -8,6 +8,8 @@
             [ring.middleware.reload :refer [wrap-reload]]
             [environ.core :refer [env]]))
 
+
+ "https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
 (def home-page
   (html
    [:html
@@ -15,9 +17,9 @@
      [:meta {:charset "utf-8"}]
      [:meta {:name "viewport"
              :content "width=device-width, initial-scale=1"}]
-     (include-css (if (env :dev) "css/site.css" "css/site.min.css"))]
+     (include-css  "https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")]
     [:body
-     [:div#app
+     [:div#app.container
       [:h3 "ClojureScript has not been compiled!"]
       [:p "please run "
        [:b "lein figwheel"]
